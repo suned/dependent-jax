@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pax"
+version = "0.0.1"
+description = ""
+authors = ["Sune Debel <sune.debel@omhu.com>"]
+include = ["numpy-stubs", "jax-stubs"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+jax = "^0.2.26"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.910"
+numpy = "^1.21.4"
+pytest = "^6.2.5"
+jax = {extras = ["cpu"], version = "^0.2.26"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = ["pax"]
